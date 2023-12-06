@@ -404,3 +404,148 @@ print(dir(mymodule))
 88What is the correct syntax of importing only the person1 dictionary of the "mymodule" module?
 from mymodule import person1
 
+89. Adding two no
+num1=20
+num2=30
+sum=num1+num2
+print("Addition of two numbers is",sum)
+
+90. Even Odd Program in Python
+num=int(input("Enter a number to check odd or even"))
+if num % 2 == 0:
+    print("Number is Even")
+else:
+    print("Number is Odd")
+
+91. Reverse a Number  /////Slicing method
+num=int(input("Enter a number to check odd or even"))
+n=str(num)
+res=int(n[::-1])
+print(res)
+
+or
+
+num=int(input("Enter a number"))
+rev_no=0
+while num > 0:
+    rem=num%10
+    rev_no=rev_no*10+rem
+    num=num // 10
+print(rev_no)
+
+92. Armstrong number checking.
+Armstrong number is a number that is equal to the sum of cubes of its digits. For example 0, 1, 153, 370, 371 and 407 are the Armstrong numbers.
+
+num=int(input("Enter a number"))
+temp=num
+arm_no=0
+while num > 0:
+    rem=num%10
+    arm_no=arm_no+rem*rem*rem
+    num=num // 10
+print(arm_no)
+
+if temp == arm_no:
+    print("this is arm_no",arm_no)
+else:
+    print("this is not arm_no",arm_no)
+
+93. Check Leap year
+import calendar
+year=int(input("enter year"))
+if calendar.isleap(year):
+    print("leap year")
+else: 
+    print("not a leap year")
+  
+    or
+
+    
+year=int(input("enter year"))
+if year % 400 == 0:
+    print("leap year")
+elif year % 4 == 0:
+    if  year % 100 == 0: 
+        print("not a leap year")
+    print("leap year")
+print("not a leap year")
+
+94. Convert Celcius to Fahreinheit
+Fahrenheit = (1.8 * celsius) + 32;
+
+cel=int(input("enter temperature in celcious"))
+fohreinheit=(cel*1.8) + 32
+print("fohreinheit",fohreinheit)
+
+95. Factorial of a Number
+def fact(num):
+    if num == 1:
+        return num
+    else:
+        return num*fact(num-1)
+if num < 0:
+    print("no not exist")
+elif num == 1:
+        print("fact is 1")
+else:    
+    print("factorial of no",fact(num))
+
+
+96. Anagram Program in Python
+ if the second string is simply a rearrangement of the first, it is said to be an anagram of the first.
+
+str1=input("enter 1 st string")
+str2=input("enter 2 st string")
+list1=list(str1)
+list2=list(str2)
+print(list1)
+print(list2)
+list1.sort()
+list2.sort()
+print(list1)
+print(list2)
+
+def param(str1,str2):
+    pos=0
+    matches=True
+    while pos < len(str1) and matches:
+        if list1[pos] == list2[pos]:
+            pos=pos+1
+        else:
+            matches=False
+    return matches
+
+print("strings are  anagram",param(str1,str2))
+
+97.. Fizzbuzz Program
+For numbers divisible by 3, it prints "Fizz" instead of the number.
+For numbers divisible by 5, it prints "Buzz" instead of the number.
+For numbers divisible by both 3 and 5, it prints "FizzBuzz" instead of the number.
+n=int(input("enter how many number to print"))
+for i in range(1,n+1):
+    if i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    elif i % 3 == 0 and i % 5 == 0:
+        print("FizzBuzz")
+    else:
+        print(i) 
+  
+98. Prime no
+a number that is divisible only by 1 and itself.
+num= int(input("enter no"))
+flag=0
+if num == 1:
+    flag=1
+    print("not Prime")
+for i in range(2,num):
+    if num % i == 0:
+        print("Not prime ")
+        flag=1
+        break
+
+if flag == 0:
+    print("prime number")
+
+99.
